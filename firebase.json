@@ -1,0 +1,9 @@
+{
+  "firebase": "stylebar",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

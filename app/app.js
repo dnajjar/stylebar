@@ -1,8 +1,8 @@
 'use strict';
 
-var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'firebase']);
+var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
-app.config(function ($stateProvider, $httpProvider, $provide, $urlRouterProvider) {
+app.config(function ($stateProvider) {
 
     var defaultOnEnter = function () {
         return;
@@ -23,7 +23,8 @@ app.config(function ($stateProvider, $httpProvider, $provide, $urlRouterProvider
 
     defineState('home', {
         url: '',
-        templateFile: 'home.html',
+        template: '<div>something</div>',
+        //templateFile: 'home.html',
         controller: 'HomeController',
         controllerAs: 'homectrl'
     });
