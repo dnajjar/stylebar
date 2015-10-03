@@ -2,7 +2,9 @@
 
 var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
-app.config(function ($stateProvider) {
+app.config(function ($stateProvider, $locationProvider) {
+
+    //$locationProvider.html5Mode(true);
 
     var defaultOnEnter = function () {
         return;
@@ -21,12 +23,46 @@ app.config(function ($stateProvider) {
         $stateProvider.state(name, state);
     };
 
-    defineState('home', {
+    $stateProvider
+      .state('app', {
         url: '',
-        template: '<div>something</div>',
-        //templateFile: 'home.html',
+        abstract: true,
+        template: '<div ui-view></div>'
+    }).
+
+    state('app.home', {
+        url: '/home',
+        templateUrl: viewDirectory + 'home.html',
         controller: 'HomeController',
         controllerAs: 'homectrl'
+    })
+
+    .state('app.clothes', {
+        url: '/clothes',
+        templateUrl: viewDirectory + 'clothes.html',
+        controller: 'ClothesController',
+        controllerAs: 'clothesctrl'
+    })
+
+
+    .state('provider', {
+        url: '/provider',
+        //templateFile: 'provider.html',
+        //controller: 'ProviderController',
+        //controllerAs: 'providerctrl'.
+        views: {
+            '':{
+                templateUrl: viewDirectory + 'provider.html',
+                controller: 'ProviderController',
+                controllerAs: 'providerctrl'
+            },
+            'account@provider':{
+                templateUrl: viewDirectory + 'provider-account.html',
+            },
+            'order@provider':{
+                templateUrl: viewDirectory + 'provider-order.html',
+            }
+          }
     });
 
 });
