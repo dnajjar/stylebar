@@ -355,7 +355,7 @@ button i.fa {
   filter: alpha(opacity=30);
 }
 #intro {
-  background: url('../img/home.jpg') no-repeat center top;
+  background: url('../img/woman_hero_color.png') no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1290,6 +1290,7 @@ button i.fa {
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -1306,6 +1307,9 @@ button i.fa {
   font-size: 18px;
   line-height: 20px;
   height: 80px;
+}
+.navbar-brand > img {
+	height: 55px !important;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -1354,6 +1358,7 @@ button i.fa {
   .navbar-nav > li > a {
     padding-top: 30px;
     padding-bottom: 30px;
+
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -1400,7 +1405,6 @@ button i.fa {
 }
 .navbar-default {
   background-color: #ffffff;
-  border-bottom-color: #e6e6e6;
 }
 .navbar-default .navbar-brand {
   color: #777777;
@@ -1541,7 +1545,7 @@ hr {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .btn-primary {
   color: #b56868;
@@ -1596,19 +1600,19 @@ fieldset[disabled] .btn-primary.active {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 .btn-sm {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .btn-xs {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 /* dropdowns */
 .dropdown-menu > li > a {
