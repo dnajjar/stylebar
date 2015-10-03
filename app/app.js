@@ -1,10 +1,12 @@
 'use strict';
 
-var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
+var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'duScroll']);
 
-app.config(function ($stateProvider, $locationProvider) {
+app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
 
     //$locationProvider.html5Mode(true);
+
+    $urlRouterProvider.otherwise("/");
 
     var defaultOnEnter = function () {
         return;
@@ -14,56 +16,34 @@ app.config(function ($stateProvider, $locationProvider) {
     };
     var viewDirectory = './app/views/';
 
-    var defineState = function (name, state) {
-        if (!state.onEnter) state.onEnter = defaultOnEnter;
-        if (!state.onExit) state.onExit = defaultOnExit;
-        //if (!state.templateFile && !state.template && !state.templateUrl) state.templateFile = name + ".html";
-        //if (!state.controller) state.controller = name;
-        if (state.templateFile) state.templateUrl = viewDirectory + state.templateFile;
-        $stateProvider.state(name, state);
-    };
-
     $stateProvider
       .state('app', {
         url: '',
         abstract: true,
-        template: '<div ui-view></div>'
+        templateUrl: viewDirectory + 'main.html'
     }).
 
     state('app.home', {
-        url: '/home',
+        url: '/',
         templateUrl: viewDirectory + 'home.html',
         controller: 'HomeController',
-        controllerAs: 'homectrl'
+        controllerAs: 'homeCtrl'
     })
 
-    .state('app.clothes', {
-        url: '/clothes',
-        templateUrl: viewDirectory + 'clothes.html',
-        controller: 'ClothesController',
-        controllerAs: 'clothesctrl'
+    .state('app.browsing', {
+        url: '/browsing',
+        templateUrl: viewDirectory + 'browsing.html',
+        controller: 'BrowsingController',
+        controllerAs: 'browsingCtrl'
     })
 
+    .state('app.stylist', {
+        url: '/stylist',
+        templateUrl: viewDirectory + 'stylist.html',
+        controller: 'StylistController',
+        controllerAs: 'stylistCtrl'
+    })
 
-    .state('provider', {
-        url: '/provider',
-        //templateFile: 'provider.html',
-        //controller: 'ProviderController',
-        //controllerAs: 'providerctrl'.
-        views: {
-            '':{
-                templateUrl: viewDirectory + 'provider.html',
-                controller: 'ProviderController',
-                controllerAs: 'providerctrl'
-            },
-            'account@provider':{
-                templateUrl: viewDirectory + 'provider-account.html',
-            },
-            'order@provider':{
-                templateUrl: viewDirectory + 'provider-order.html',
-            }
-          }
-    });
 
 });
 
