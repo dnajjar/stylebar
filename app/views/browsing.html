@@ -30,7 +30,7 @@
                     <div class="col-sm-12 col-md-12  products-number-sort">
                         <div class="row">
                             <form class="form-inline">
-                                 <div class="col-md-9 col-sm-9">
+                                 <div class="col-md-8 col-sm-8">
                                     <div>
                                         <strong>Filter by</strong>
                                         <select name="filter-by" class="form-control filter-by" ng-repeat="filter in browsingCtrl.filterOptions" ng-model="browsingCtrl.filters[filter.name]">
@@ -40,12 +40,12 @@
 
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-3">
+                                <div class="col-md-4 col-sm-4">
                                     <div class="products-sort-by">
                                         <strong>Sort by</strong>
-                                        <select name="sort-by" class="form-control" ng-model="browsingCtrl.sortBy">
+                                        <select name="sort-by" class="form-control filter-by" ng-model="browsingCtrl.sortBy">
                                             <option value="" selected disabled>Sort by</option>
-                                            <option value="{{option}}" ng-repeat="option in browsingCtrl.sortings">{{option}}</option>
+                                            <option value="{{option.sort}}" ng-repeat="option in browsingCtrl.sortings">{{option.display}}</option>
                                         </select>
                                     </div>
                                 </div>
