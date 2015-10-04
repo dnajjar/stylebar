@@ -45,6 +45,14 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
     })
 
 
+    .state('question', {
+        url: '/question',
+        templateUrl: viewDirectory + 'question.html',
+        controller: 'QuestionController',
+        controllerAs: 'qCtrl'
+    })
+
+
 });
 
 app.run(function ($rootScope, $location, $window) {
