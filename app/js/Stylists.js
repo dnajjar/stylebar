@@ -5,7 +5,7 @@ angular.module('app').factory('Stylists', function () {
     var events = ['Wedding', 'Interview', 'Date night', "Public Appearance", "Glam Event"];
     var tags = ['Modern', 'Chic', 'Formal', 'Vintage', 'Casual','Style'];
     var locations = ["New York", "Houston", "Jersey City", "Boston", "Chicago"];
-    var ratings = [5,4,3,2,1];
+    var ratings = [5,4,3];
     var names = ['Sofia', "Anna", "Lisa", "Brianna", "Heather", "Chenyu", "Dana", "Sara", "Julia"]
     var stylists = [];
 
