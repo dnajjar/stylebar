@@ -2,12 +2,12 @@
 	margin-left: 10px;
 }
 
-#content .product{
+#content .stylists{
 	position: relative;
 }
 
 
-#content .product .profile-pic {
+#content .stylists .profile-pic {
   position: absolute;
   top: 40%;
   left: 25%;
@@ -15,13 +15,13 @@
   right: 25%;
 }
 
-#content .product .profile-pic img{
+#content .stylists .profile-pic img{
 	border:3px solid #fff;
 	margin: 0 auto;
 	width: 80%
 }
 
-#content .product .text {
+#content .stylists .text {
   margin-top: 60px;
 }
 
