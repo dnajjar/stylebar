@@ -8,7 +8,19 @@ angular.module('app').factory('Stylists', function () {
     var ratings = [5,4,3,2,1];
     var names = ['Sofia', "Anna", "Lisa", "Brianna", "Heather", "Chenyu", "Dana", "Sara", "Julia"]
     var stylists = [];
-    for(var i=0;i<9;i++){
+
+    stylists.push({
+            img:'img/stylist-sofia.jpg', 
+            icon:'img/stylist-1.jpg', 
+            tier: 'Silver Gold Platinum',
+            event: 'Wedding Interview Data night',
+            tags: 'Modern Chic Formal Vintage Casual',
+            location: '"New York", "Houston", "Jersey City", "Boston", "Chicago"',
+            rating: 5,
+            name: names[0]
+        });
+
+    for(var i=1;i<9;i++){
         var tier = Math.floor(Math.random() * tiers.length);
         var event = Math.floor(Math.random() * events.length);
         var rating = Math.floor(Math.random() * ratings.length);
@@ -18,9 +30,11 @@ angular.module('app').factory('Stylists', function () {
 
         stylists.push({
             img:'img/stylist-work-'+(i+1)+'.jpg', 
-            icon:'img/product'+icon+'.jpg', 
+            icon:'img/stylist-'+(i+1)+'.jpg', 
             tier: tiers[tier], 
             event: events[event],
+            tags: 'Modern Chic Formal Vintage Casual',
+            location: '"New York", "Houston", "Jersey City", "Boston", "Chicago"',
             rating: ratings[rating],
             name: names[i]
         });
