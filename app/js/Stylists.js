@@ -35,7 +35,7 @@ angular.module('app').factory('Stylists', function () {
             event: events[event],
             tags: 'Modern Chic Formal Vintage Casual',
             location: '"New York", "Houston", "Jersey City", "Boston", "Chicago"',
-            rating: ratings[rating],
+            rating: rating,
             name: names[i]
         });
     }

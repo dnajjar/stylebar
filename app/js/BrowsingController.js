@@ -1,11 +1,7 @@
 angular.module('app').controller('BrowsingController', function ($state, Stylists) {
     var ctrl = this;
 
-    ctrl.filters = {};
-
-    // var tiers = ['1', '2', '3'];
-    // var events = ['Wedding', 'Interview'];
-    // var ratings = [5,4,3,2,1];
+    ctrl.filters = {location: 'New York'};
 
     ctrl.filterOptions = [
     	{name: 'tier', category: 'Tier', options: Stylists.tiers},

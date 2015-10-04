@@ -47,10 +47,14 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
 
 });
 
-app.run(function ($rootScope, $location) {
+app.run(function ($rootScope, $location, $window) {
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
     });
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+    });
+
+    $rootScope.$on('$routeChangeStart', function(evt, absNewUrl, absOldUrl){
+        $window.scrollTo(0,0);    //scroll to top of page after each route change
     });
 });
 
