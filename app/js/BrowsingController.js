@@ -15,7 +15,7 @@ angular.module('app').controller('BrowsingController', function ($state, Stylist
 
     ];
 
-    ctrl.sortings = [{display: 'tier', sort: 'tier'}, {display:'rating', sort:'-rating'}];
+    ctrl.sortings = [{display: 'Tier', sort: 'tier'}, {display:'Rating', sort:'-rating'}, {display:'Name', sort:'name'}];
 
 
     ctrl.stylists = Stylists.stylists;

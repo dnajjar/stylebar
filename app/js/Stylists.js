@@ -2,8 +2,8 @@
 
 angular.module('app').factory('Stylists', function () {
     var tiers = ['Silver', 'Gold', 'Platinum'];
-    var events = ['Wedding', 'Interview', 'Data night'];
-    var tags = ['Modern', 'Chic', 'Formal', 'Vintage', 'Casual'];
+    var events = ['Wedding', 'Interview', 'Date night', "Public Appearance", "Glam Event"];
+    var tags = ['Modern', 'Chic', 'Formal', 'Vintage', 'Casual','Style'];
     var locations = ["New York", "Houston", "Jersey City", "Boston", "Chicago"];
     var ratings = [5,4,3,2,1];
     var names = ['Sofia', "Anna", "Lisa", "Brianna", "Heather", "Chenyu", "Dana", "Sara", "Julia"]
@@ -12,10 +12,10 @@ angular.module('app').factory('Stylists', function () {
     stylists.push({
             img:'img/stylist-sofia.jpg', 
             icon:'img/stylist-1.jpg', 
-            tier: 'Silver Gold Platinum',
-            event: 'Wedding Interview Data night',
-            tags: 'Modern Chic Formal Vintage Casual',
-            location: '"New York", "Houston", "Jersey City", "Boston", "Chicago"',
+            tier: tiers.join(),
+            event: events.join(),
+            tags: tags.join(),
+            location: locations.join(),
             rating: 5,
             name: names[0]
         });
@@ -23,7 +23,7 @@ angular.module('app').factory('Stylists', function () {
     for(var i=1;i<9;i++){
         var tier = Math.floor(Math.random() * tiers.length);
         var event = Math.floor(Math.random() * events.length);
-        var rating = Math.floor(Math.random() * ratings.length);
+        var rating = (i<4)? 5:4;
 
         var img = Math.floor(Math.random() * 7) + 1;
         var icon = Math.floor(Math.random() * 4) + 1;
