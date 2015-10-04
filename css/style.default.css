@@ -72,6 +72,8 @@
   margin-left: 7px;
   margin-right: 0;
 }
+
+
 .navbar .btn-default:hover,
 .navbar .btn-default.navbar-toggle:hover,
 .navbar .btn-default:focus,
@@ -80,6 +82,7 @@
   border-color: #b56868;
   color: #b56868;
 }
+
 .navbar #search {
   clear: both;
   border-top: solid 1px #b56868;
