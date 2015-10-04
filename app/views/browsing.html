@@ -60,11 +60,11 @@
                 <div class="col-md-4 col-sm-4" ng-repeat="stylist in browsingCtrl.stylists | filter: browsingCtrl.filters | orderBy: browsingCtrl.sortBy">
                     <div class="product">
                         <div class="image">
-                            <a href="/#/stylist" class="work-img">
+                            <a ui-sref="^.stylist({ id: $index })" class="work-img">
                                 <img ng-src="{{stylist.img}}" alt="" class="img-responsive image1">
                             </a>
                             <div class="quick-view-button">
-                                <a href="/stylist" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a>
+                                <a ui-sref="^.stylist({ id: $index })" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a>
                             </div>
                         </div>
                         <!-- /.image -->

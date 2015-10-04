@@ -9,7 +9,7 @@
 
 #content .product .profile-pic {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 25%;
   bottom: 25%;
   right: 25%;
@@ -17,6 +17,8 @@
 
 #content .product .profile-pic img{
 	border:3px solid #fff;
+	margin: 0 auto;
+	width: 80%
 }
 
 #content .product .text {

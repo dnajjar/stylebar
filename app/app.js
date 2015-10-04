@@ -38,7 +38,7 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
     })
 
     .state('app.stylist', {
-        url: '/stylist',
+        url: '/stylist/:id',
         templateUrl: viewDirectory + 'stylist.html',
         controller: 'StylistController',
         controllerAs: 'stylistCtrl'
