@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('app').factory('Stylists', function () {
-    var tiers = ['1', '2', '3'];
-    var events = ['Wedding', 'Interview'];
+    var tiers = ['Silver', 'Gold', 'Platinum'];
+    var events = ['Wedding', 'Interview', 'Data night'];
+    var tags = ['Modern', 'Chic', 'Formal', 'Vintage', 'Casual'];
+    var locations = ["New York", "Houston", "Jersey City", "Boston", "Chicago"];
     var ratings = [5,4,3,2,1];
-
+    var names = ['Sofia', "Anna", "Lisa", "Brianna", "Heather", "Chenyu", "Dana", "Sara", "Julia"]
     var stylists = [];
     for(var i=0;i<9;i++){
         var tier = Math.floor(Math.random() * tiers.length);
@@ -20,7 +22,7 @@ angular.module('app').factory('Stylists', function () {
             tier: tiers[tier], 
             event: events[event],
             rating: ratings[rating],
-            name: 'stylist name'
+            name: names[i]
         });
     }
 
@@ -29,7 +31,9 @@ angular.module('app').factory('Stylists', function () {
     return {
         stylists: stylists,
         tiers: tiers,
+        locations: locations,
         events: events,
-        ratings: ratings
+        ratings: ratings,
+        tags: tags
     }
 });

@@ -9,9 +9,11 @@ angular.module('app').controller('BrowsingController', function ($state, Stylist
 
     ctrl.filterOptions = [
     	{name: 'tier', category: 'Tier', options: Stylists.tiers},
-    	{name: 'location', category: 'Location', options: []},
+    	{name: 'location', category: 'Location', options: Stylists.locations},
     	//{category: 'Tags', options: []}
-    	{name: 'event', category: 'Event', options: Stylists.events}
+    	{name: 'event', category: 'Event', options: Stylists.events},
+        {name: 'tags', category: 'Tags', options: Stylists.tags}        
+
     ];
 
     ctrl.sortings = [{display: 'tier', sort: 'tier'}, {display:'rating', sort:'-rating'}];

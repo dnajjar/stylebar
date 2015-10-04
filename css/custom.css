@@ -24,3 +24,8 @@
 #content .product .text {
   margin-top: 60px;
 }
+
+#comments .comment-start{
+  margin-top: 200px;
+  margin-left: 100px;
+}
